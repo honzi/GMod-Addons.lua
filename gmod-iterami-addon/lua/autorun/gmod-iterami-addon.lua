@@ -4,6 +4,33 @@ hook.Add(
   "PopulateToolMenu",
   "CustomMenuSettings",
   function()
+      function AddCommandButtons(commands, panel)
+          local y = 0;
+          for i, command in ipairs(commands) do
+              y = y + 23
+
+              local button = vgui.Create(
+                "DButton",
+                panel
+              )
+              button:SetSize(
+                100,
+                23
+              )
+              button:SetPos(
+                0,
+                y
+              )
+              button:SetText(command)
+              button.DoClick = function()
+                  RunConsoleCommand(
+                    command,
+                    ""
+                  )
+              end
+          end
+      end
+
       spawnmenu.AddToolMenuOption(
         "iterami",
         "Commands",
@@ -14,36 +41,15 @@ hook.Add(
         function(panel)
             panel:ClearControls()
 
-            local commands = {
-              'clear',
-              'disconnect',
-              'flush',
-              'quit',
-            }
-            local y = 0;
-            for i, command in ipairs(commands) do
-                y = y + 23
-
-                local button = vgui.Create(
-                  "DButton",
-                  panel
-                )
-                button:SetSize(
-                  100,
-                  23
-                )
-                button:SetPos(
-                  0,
-                  y
-                )
-                button:SetText(command)
-                button.DoClick = function()
-                    RunConsoleCommand(
-                      command,
-                      ""
-                    )
-                end
-            end
+            AddCommandButtons(
+              {
+                'clear',
+                'disconnect',
+                'flush',
+                'quit',
+              },
+              panel
+            )
         end
       )
       spawnmenu.AddToolMenuOption(
@@ -56,37 +62,16 @@ hook.Add(
         function(panel)
             panel:ClearControls()
 
-            local commands = {
-              'buddha',
-              'givecurrentammo',
-              'god',
-              'kill',
-              'noclip',
-            }
-            local y = 0;
-            for i, command in ipairs(commands) do
-                y = y + 23
-
-                local button = vgui.Create(
-                  "DButton",
-                  panel
-                )
-                button:SetSize(
-                  100,
-                  23
-                )
-                button:SetPos(
-                  0,
-                  y
-                )
-                button:SetText(command)
-                button.DoClick = function()
-                    RunConsoleCommand(
-                      command,
-                      ""
-                    )
-                end
-            end
+            AddCommandButtons(
+              {
+                'buddha',
+                'givecurrentammo',
+                'god',
+                'kill',
+                'noclip',
+              },
+              panel
+            )
         end
       )
       spawnmenu.AddToolMenuOption(
@@ -99,33 +84,12 @@ hook.Add(
         function(panel)
             panel:ClearControls()
 
-            local commands = {
-              'r_cleardecals',
-            }
-            local y = 0;
-            for i, command in ipairs(commands) do
-                y = y + 23
-
-                local button = vgui.Create(
-                  "DButton",
-                  panel
-                )
-                button:SetSize(
-                  100,
-                  23
-                )
-                button:SetPos(
-                  0,
-                  y
-                )
-                button:SetText(command)
-                button.DoClick = function()
-                    RunConsoleCommand(
-                      command,
-                      ""
-                    )
-                end
-            end
+            AddCommandButtons(
+              {
+                'r_cleardecals',
+              },
+              panel
+            )
         end
       )
   end
