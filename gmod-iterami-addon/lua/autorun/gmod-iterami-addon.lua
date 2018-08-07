@@ -65,10 +65,12 @@ hook.Add(
             AddCommandButtons(
               {
                 'buddha',
+                'firstperson',
                 'givecurrentammo',
                 'god',
                 'kill',
                 'noclip',
+                'thirdperson',
               },
               panel
             )
