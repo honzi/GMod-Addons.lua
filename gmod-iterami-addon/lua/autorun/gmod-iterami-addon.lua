@@ -28,6 +28,10 @@ hook.Add(
                   "DButton",
                   panel
                 )
+                button:SetSize(
+                  100,
+                  23
+                )
                 button:SetPos(
                   0,
                   y
@@ -53,6 +57,8 @@ hook.Add(
             panel:ClearControls()
 
             local commands = {
+              'buddha',
+              'givecurrentammo',
               'god',
               'kill',
               'noclip',
@@ -64,6 +70,10 @@ hook.Add(
                 local button = vgui.Create(
                   "DButton",
                   panel
+                )
+                button:SetSize(
+                  100,
+                  23
                 )
                 button:SetPos(
                   0,
@@ -99,6 +109,10 @@ hook.Add(
                 local button = vgui.Create(
                   "DButton",
                   panel
+                )
+                button:SetSize(
+                  100,
+                  23
                 )
                 button:SetPos(
                   0,
