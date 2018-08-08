@@ -4,7 +4,7 @@ hook.Add(
   "PopulateToolMenu",
   "CustomMenuSettings",
   function()
-      function AddCommandButtons(commands, panel)
+      function AddCommandButtons(commands, panel, x)
           local y = 0;
           for i, command in ipairs(commands) do
               y = y + 23
@@ -18,7 +18,7 @@ hook.Add(
                 23
               )
               button:SetPos(
-                0,
+                x,
                 y
               )
               button:SetText(command)
@@ -33,9 +33,9 @@ hook.Add(
 
       spawnmenu.AddToolMenuOption(
         "iterami",
+        "iterami",
         "Commands",
-        "GMod",
-        "GMod",
+        "Commands",
         "",
         "",
         function(panel)
@@ -48,20 +48,9 @@ hook.Add(
                 'flush',
                 'quit',
               },
-              panel
+              panel,
+              0
             )
-        end
-      )
-      spawnmenu.AddToolMenuOption(
-        "iterami",
-        "Commands",
-        "Player",
-        "Player",
-        "",
-        "",
-        function(panel)
-            panel:ClearControls()
-
             AddCommandButtons(
               {
                 'buddha',
@@ -72,25 +61,15 @@ hook.Add(
                 'noclip',
                 'thirdperson',
               },
-              panel
+              panel,
+              100
             )
-        end
-      )
-      spawnmenu.AddToolMenuOption(
-        "iterami",
-        "Commands",
-        "World",
-        "World",
-        "",
-        "",
-        function(panel)
-            panel:ClearControls()
-
             AddCommandButtons(
               {
                 'r_cleardecals',
               },
-              panel
+              panel,
+              200
             )
         end
       )
