@@ -4,30 +4,40 @@ hook.Add(
   "PopulateToolMenu",
   "CustomMenuSettings",
   function()
+      function CreateButton(panel, text, x, y, onclick)
+          local button = vgui.Create(
+            "DButton",
+            panel
+          )
+          button:SetSize(
+            100,
+            23
+          )
+          button:SetPos(
+            x,
+            y
+          )
+          button:SetText(text)
+          button.DoClick = onclick
+      end
+
       function AddCommandButtons(commands, panel, x)
           local y = 0;
           for i, command in ipairs(commands) do
               y = y + 23
 
-              local button = vgui.Create(
-                "DButton",
-                panel
-              )
-              button:SetSize(
-                100,
-                23
-              )
-              button:SetPos(
+              CreateButton(
+                panel,
+                command,
                 x,
-                y
+                y,
+                function()
+                    RunConsoleCommand(
+                      command,
+                      ""
+                    )
+                end
               )
-              button:SetText(command)
-              button.DoClick = function()
-                  RunConsoleCommand(
-                    command,
-                    ""
-                  )
-              end
           end
       end
 
