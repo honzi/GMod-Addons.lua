@@ -42,7 +42,7 @@ hook.Add(
             panel
           )
           textEntry:SetPos(
-            x + 105,
+            x + 100,
             y
           )
           textEntry:SetText(text)
@@ -111,7 +111,7 @@ hook.Add(
 
             CreateTextEntry(
               panel,
-              'gravity:',
+              'gravity=600',
               '600',
               0,
               184,
