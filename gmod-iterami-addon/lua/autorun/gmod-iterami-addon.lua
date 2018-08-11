@@ -21,6 +21,33 @@ hook.Add(
           button.DoClick = onclick
       end
 
+      function CreateTextEntry(panel, text, value, x, y, onenter)
+          local textEntry = vgui.Create(
+            "DTextEntry",
+            panel
+          )
+          textEntry:SetSize(
+            100,
+            23
+          )
+          textEntry:SetPos(
+            x,
+            y
+          )
+          textEntry:SetText(value)
+          textEntry.OnEnter = onenter
+
+          local textEntry = vgui.Create(
+            "DLabel",
+            panel
+          )
+          textEntry:SetPos(
+            x + 105,
+            y
+          )
+          textEntry:SetText(text)
+      end
+
       function AddCommandButtons(commands, panel, x)
           local y = 0;
           for i, command in ipairs(commands) do
@@ -80,6 +107,20 @@ hook.Add(
               },
               panel,
               200
+            )
+
+            CreateTextEntry(
+              panel,
+              'gravity:',
+              '600',
+              0,
+              184,
+              function(self)
+                  RunConsoleCommand(
+                    "sv_gravity",
+                    self:GetValue()
+                  )
+              end
             )
         end
       )
