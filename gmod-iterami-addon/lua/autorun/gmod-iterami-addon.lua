@@ -37,15 +37,16 @@ hook.Add(
           textEntry:SetText(value)
           textEntry.OnEnter = onenter
 
-          local textEntry = vgui.Create(
+          local textLabel = vgui.Create(
             "DLabel",
             panel
           )
-          textEntry:SetPos(
+          textLabel:SetPos(
             x + 100,
             y
           )
-          textEntry:SetText(text)
+          textLabel:SetText(text)
+          textLabel:SetTextColor(Color(0, 0, 0))
       end
 
       function AddCommandButtons(commands, panel, x)
@@ -96,6 +97,7 @@ hook.Add(
                 'god',
                 'kill',
                 'noclip',
+                'notarget',
                 'thirdperson',
               },
               panel,
@@ -114,7 +116,7 @@ hook.Add(
               'gravity=600',
               '600',
               0,
-              184,
+              207,
               function(self)
                   RunConsoleCommand(
                     "sv_gravity",
