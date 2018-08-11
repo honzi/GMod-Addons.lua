@@ -43,7 +43,7 @@ function AddCommandCheckBoxes(panel, commands, x, y)
 
         CreateTextLabel(
           panel,
-          command .. " (0)",
+          command,
           x + 20,
           y
         )
