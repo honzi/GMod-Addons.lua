@@ -23,7 +23,7 @@ function AddCommandCheckBoxes(panel, commands, x, y)
 
         CreateCheckBox(
           panel,
-          0,
+          GetConVar(command):GetInt(),
           x,
           y,
           function(this)
@@ -170,9 +170,13 @@ hook.Add(
             AddCommandCheckBoxes(
               panel,
               {
+                'cl_ejectbrass',
                 'cl_showfps',
                 'cl_showpos',
                 'net_graph',
+                'r_drawrain',
+                'sv_cheats',
+                'voice_enable',
               },
               155,
               23
