@@ -28,13 +28,13 @@ function AddCommandCheckBoxes(panel, commands, x, y)
           y,
           function(this)
               local value = 0
-              if this:getChecked() then
+              if this:GetChecked() then
                   value = 1
               end
 
               RunConsoleCommand(
                 command,
-                "1"
+                value
               )
           end
         )
