@@ -157,8 +157,8 @@ hook.Add(
               panel,
               'sv_gravity (600)',
               '600',
-              150,
-              23,
+              0,
+              322,
               function(self)
                   RunConsoleCommand(
                     "sv_gravity",
@@ -171,17 +171,23 @@ hook.Add(
               panel,
               {
                 'cl_ejectbrass',
+                'cl_ragdoll_collide',
+                'cl_show_splashes',
                 'cl_showfps',
                 'cl_showpos',
+                'fog_enable_water_fog',
                 'net_graph',
                 'r_3dsky',
-                'r_drawrain',
                 'r_drawparticles',
+                'r_drawrain',
+                'r_eyes',
+                'r_shadows',
+                'r_teeth',
                 'sv_cheats',
                 'voice_enable',
               },
               155,
-              23
+              0
             )
         end
       )
