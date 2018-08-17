@@ -168,6 +168,7 @@ hook.Add(
             AddCommandCheckBoxes(
               panel,
               {
+                'ai_expression_optimization',
                 'cl_ejectbrass',
                 'cl_ragdoll_collide',
                 'cl_show_splashes',
