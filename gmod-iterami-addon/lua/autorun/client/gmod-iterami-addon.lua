@@ -154,7 +154,7 @@ hook.Add(
             CreateTextEntry(
               panel,
               'sv_gravity (600)',
-              '600',
+              GetConVar('sv_gravity'):GetInt(),
               0,
               322,
               function(self)
