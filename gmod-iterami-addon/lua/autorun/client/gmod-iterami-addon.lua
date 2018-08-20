@@ -42,7 +42,7 @@ function AddCommandCheckBoxes(panel, commands, x, y)
         CreateTextLabel(
           panel,
           command,
-          x + 20,
+          x + 16,
           y
         )
     end
@@ -97,7 +97,7 @@ function CreateTextEntry(panel, text, value, x, y, onenter)
     CreateTextLabel(
       panel,
       text,
-      x + 55,
+      x + 51,
       y
     )
 end
@@ -168,26 +168,68 @@ hook.Add(
                 'r_eyes',
                 'r_shadows',
                 'r_teeth',
+                'sv_allow_votes',
+                'sv_alltalk',
                 'sv_cheats',
+                'sv_ladder_useonly',
                 'violence_ablood',
                 'violence_agibs',
                 'violence_hblood',
                 'violence_hgibs',
                 'voice_enable',
               },
-              155,
+              152,
               0
             )
 
             CreateTextEntry(
               panel,
-              'sv_gravity (600)',
-              GetConVar('sv_gravity'):GetInt(),
+              'sv_friction (8)',
+              GetConVar('sv_friction'):GetInt(),
               0,
               322,
               function(self)
                   RunConsoleCommand(
+                    "sv_friction",
+                    self:GetValue()
+                  )
+              end
+            )
+            CreateTextEntry(
+              panel,
+              'sv_gravity (600)',
+              GetConVar('sv_gravity'):GetInt(),
+              0,
+              345,
+              function(self)
+                  RunConsoleCommand(
                     "sv_gravity",
+                    self:GetValue()
+                  )
+              end
+            )
+            CreateTextEntry(
+              panel,
+              'sv_maxvelocity (3500)',
+              GetConVar('sv_maxvelocity'):GetInt(),
+              0,
+              368,
+              function(self)
+                  RunConsoleCommand(
+                    "sv_maxvelocity",
+                    self:GetValue()
+                  )
+              end
+            )
+            CreateTextEntry(
+              panel,
+              'sv_noclipspeed (5)',
+              GetConVar('sv_noclipspeed'):GetInt(),
+              0,
+              391,
+              function(self)
+                  RunConsoleCommand(
+                    "sv_noclipspeed",
                     self:GetValue()
                   )
               end
