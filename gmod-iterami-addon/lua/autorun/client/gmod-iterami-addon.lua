@@ -151,20 +151,6 @@ hook.Add(
               0
             )
 
-            CreateTextEntry(
-              panel,
-              'sv_gravity (600)',
-              GetConVar('sv_gravity'):GetInt(),
-              0,
-              322,
-              function(self)
-                  RunConsoleCommand(
-                    "sv_gravity",
-                    self:GetValue()
-                  )
-              end
-            )
-
             AddCommandCheckBoxes(
               panel,
               {
@@ -191,6 +177,20 @@ hook.Add(
               },
               155,
               0
+            )
+
+            CreateTextEntry(
+              panel,
+              'sv_gravity (600)',
+              GetConVar('sv_gravity'):GetInt(),
+              0,
+              322,
+              function(self)
+                  RunConsoleCommand(
+                    "sv_gravity",
+                    self:GetValue()
+                  )
+              end
             )
         end
       )
