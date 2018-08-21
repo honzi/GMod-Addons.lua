@@ -48,15 +48,14 @@ function AddCommandCheckBoxes(panel, commands, x, y)
     end
 end
 
-function AddCommandTextEntries(panel, commands, x, y)
+function AddCommandTextEntries(panel, commands, defaults, x, y)
     for i, command in ipairs(commands) do
         y = y + 23
-        local default = GetConVar(command):GetInt()
 
         CreateTextEntry(
           panel,
-          command .. '(' .. default .. ')',
-          default,
+          command .. '(' .. defaults[i] .. ')',
+          GetConVar(command):GetInt(),
           0,
           y,
           function(self)
@@ -193,6 +192,7 @@ hook.Add(
                 'sv_alltalk',
                 'sv_cheats',
                 'sv_ladder_useonly',
+                'sv_voiceenable',
                 'violence_ablood',
                 'violence_agibs',
                 'violence_hblood',
@@ -210,6 +210,12 @@ hook.Add(
                 'sv_gravity',
                 'sv_maxvelocity',
                 'sv_noclipspeed',
+              },
+              {
+                8,
+                600,
+                3500,
+                5,
               },
               0,
               299
