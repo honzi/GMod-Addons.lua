@@ -154,7 +154,6 @@ hook.Add(
               panel,
               {
                 'buddha',
-                'clear',
                 'disconnect',
                 'firstperson',
                 'flush',
@@ -163,7 +162,6 @@ hook.Add(
                 'kill',
                 'noclip',
                 'notarget',
-                'quit',
                 'r_cleardecals',
                 'thirdperson',
               },
@@ -190,14 +188,13 @@ hook.Add(
                 'r_teeth',
                 'sv_allow_votes',
                 'sv_alltalk',
-                'sv_cheats',
+                'sv_footsteps',
                 'sv_ladder_useonly',
                 'sv_voiceenable',
                 'violence_ablood',
                 'violence_agibs',
                 'violence_hblood',
                 'violence_hgibs',
-                'voice_enable',
               },
               152,
               0
@@ -218,7 +215,7 @@ hook.Add(
                 5,
               },
               0,
-              299
+              253
             )
         end
       )
