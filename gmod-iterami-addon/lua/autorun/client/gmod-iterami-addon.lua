@@ -173,6 +173,7 @@ hook.Add(
               panel,
               {
                 'ai_expression_optimization',
+                'cl_drawhud',
                 'cl_ejectbrass',
                 'cl_ragdoll_collide',
                 'cl_show_splashes',
