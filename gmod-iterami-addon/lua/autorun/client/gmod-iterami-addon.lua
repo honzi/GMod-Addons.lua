@@ -162,6 +162,7 @@ hook.Add(
                 'kill',
                 'noclip',
                 'notarget',
+                'pause',
                 'r_cleardecals',
                 'thirdperson',
               },
@@ -216,7 +217,7 @@ hook.Add(
                 5,
               },
               0,
-              253
+              276
             )
         end
       )
