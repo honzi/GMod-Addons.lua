@@ -54,7 +54,8 @@ function AddCommandTextEntries(panel, commands, defaults, x, y)
 
         CreateTextEntry(
           panel,
-          command .. '(' .. defaults[i] .. ')',
+          command,
+          defaults[i],
           GetConVar(command):GetInt(),
           0,
           y,
@@ -98,7 +99,7 @@ function CreateCheckBox(panel, value, x, y, onchange)
     button.OnChange = onchange
 end
 
-function CreateTextEntry(panel, text, value, x, y, onenter)
+function CreateTextEntry(panel, text, default, value, x, y, onenter)
     local textEntry = vgui.Create(
       "DTextEntry",
       panel
@@ -119,6 +120,12 @@ function CreateTextEntry(panel, text, value, x, y, onenter)
       text,
       x + 51,
       y
+    )
+    CreateTextLabel(
+      panel,
+      default,
+      x + 51,
+      y + 10
     )
 end
 
@@ -164,6 +171,7 @@ hook.Add(
                 'notarget',
                 'pause',
                 'r_cleardecals',
+                'restart',
                 'thirdperson',
               },
               0,
@@ -174,8 +182,10 @@ hook.Add(
               panel,
               {
                 'ai_expression_optimization',
+                'cl_draw_airboat_wake',
                 'cl_drawhud',
                 'cl_ejectbrass',
+                'cl_localnetworkbackdoor',
                 'cl_ragdoll_collide',
                 'cl_show_splashes',
                 'cl_showfps',
@@ -211,13 +221,14 @@ hook.Add(
                 'sv_noclipspeed',
               },
               {
+                3000,
                 8,
                 600,
                 3500,
                 5,
               },
               0,
-              276
+              299
             )
         end
       )
