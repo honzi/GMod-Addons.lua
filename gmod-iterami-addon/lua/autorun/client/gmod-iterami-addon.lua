@@ -48,7 +48,7 @@ function AddCommandCheckBoxes(panel, commands, x, y)
     end
 end
 
-function AddCommandTextEntries(panel, commands, defaults, x, y)
+function AddCommandTextEntries(panel, commands, defaults, values, x, y)
     for i, command in ipairs(commands) do
         y = y + 23
 
@@ -56,7 +56,7 @@ function AddCommandTextEntries(panel, commands, defaults, x, y)
           panel,
           command,
           defaults[i],
-          GetConVar(command):GetInt(),
+          values[i],
           0,
           y,
           function(self)
@@ -215,17 +215,26 @@ hook.Add(
             AddCommandTextEntries(
               panel,
               {
+                'impulse',
                 'sv_friction',
                 'sv_gravity',
                 'sv_maxvelocity',
                 'sv_noclipspeed',
               },
               {
+                '',
                 3000,
                 8,
                 600,
                 3500,
                 5,
+              },
+              {
+                '',
+                GetConVar('sv_friction'):GetInt(),
+                GetConVar('sv_gravity'):GetInt(),
+                GetConVar('sv_maxvelocity'):GetInt(),
+                GetConVar('sv_noclipspeed'):GetInt(),
               },
               0,
               299
