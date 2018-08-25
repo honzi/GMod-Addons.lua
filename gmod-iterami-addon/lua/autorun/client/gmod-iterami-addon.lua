@@ -10,7 +10,7 @@ function AddCommandButtons(panel, commands, x, y)
           function()
               RunConsoleCommand(
                 command,
-                ""
+                ''
               )
           end
         )
@@ -71,7 +71,7 @@ end
 
 function CreateButton(panel, text, x, y, onclick)
     local button = vgui.Create(
-      "DButton",
+      'DButton',
       panel
     )
     button:SetSize(
@@ -88,7 +88,7 @@ end
 
 function CreateCheckBox(panel, value, x, y, onchange)
     local button = vgui.Create(
-      "DCheckBox",
+      'DCheckBox',
       panel
     )
     button:SetPos(
@@ -101,7 +101,7 @@ end
 
 function CreateTextEntry(panel, text, default, value, x, y, onenter)
     local textEntry = vgui.Create(
-      "DTextEntry",
+      'DTextEntry',
       panel
     )
     textEntry:SetSize(
@@ -131,7 +131,7 @@ end
 
 function CreateTextLabel(panel, value, x, y)
     local textLabel = vgui.Create(
-      "DLabel",
+      'DLabel',
       panel
     )
     textLabel:SetPos(
@@ -144,16 +144,16 @@ function CreateTextLabel(panel, value, x, y)
 end
 
 hook.Add(
-  "PopulateToolMenu",
-  "CustomMenuSettings",
+  'PopulateToolMenu',
+  'CustomMenuSettings',
   function()
       spawnmenu.AddToolMenuOption(
-        "iterami",
-        "iterami",
-        "Commands",
-        "Commands",
-        "",
-        "",
+        'iterami',
+        'iterami',
+        'Commands',
+        'Commands',
+        '',
+        '',
         function(panel)
             panel:ClearControls()
 
@@ -235,4 +235,4 @@ hook.Add(
   end
 )
 
-print("GMod-iterami-Addon loaded")
+print('GMod-iterami-Addon loaded')
