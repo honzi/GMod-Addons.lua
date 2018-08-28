@@ -75,7 +75,7 @@ function AddInformationTextLabels(panel, labels, values, x, y)
 
         CreateTextLabel(
           panel,
-          label .. ': ' .. tostring(values[i]),
+          label .. ' = ' .. tostring(values[i]),
           x,
           y
         )
@@ -267,6 +267,7 @@ hook.Add(
             AddInformationTextLabels(
               panel,
               {
+                'Entity(1):GetName()',
                 'game.GetIPAddress',
                 'game.GetMap',
                 'game.GetSkillLevel',
@@ -276,6 +277,7 @@ hook.Add(
                 'game.SinglePlayer',
               },
               {
+                Entity(1):GetName(),
                 game.GetIPAddress(),
                 game.GetMap(),
                 game.GetSkillLevel(),
