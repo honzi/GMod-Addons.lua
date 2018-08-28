@@ -240,6 +240,25 @@ hook.Add(
             )
         end
       )
+
+      spawnmenu.AddToolMenuOption(
+        'iterami',
+        'iterami',
+        'Information',
+        'Information',
+        '',
+        '',
+        function(panel)
+            panel:ClearControls()
+
+            CreateTextLabel(
+              panel,
+              'Map: ' .. game.GetMap(),
+              0,
+              23
+            )
+        end
+      )
   end
 )
 
