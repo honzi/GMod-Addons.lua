@@ -69,6 +69,19 @@ function AddCommandTextEntries(panel, commands, defaults, values, x, y)
     end
 end
 
+function AddInformationTextLabels(panel, labels, values, x, y)
+    for i, label in ipairs(labels) do
+        y = y + 23
+
+        CreateTextLabel(
+          panel,
+          label .. ': ' .. tostring(values[i]),
+          x,
+          y
+        )
+    end
+end
+
 function CreateButton(panel, text, x, y, onclick)
     local button = vgui.Create(
       'DButton',
@@ -251,11 +264,28 @@ hook.Add(
         function(panel)
             panel:ClearControls()
 
-            CreateTextLabel(
+            AddInformationTextLabels(
               panel,
-              'Map: ' .. game.GetMap(),
+              {
+                'game.GetIPAddress',
+                'game.GetMap',
+                'game.GetSkillLevel',
+                'game.GetTimeScale',
+                'game.IsDedicated',
+                'game.MaxPlayers',
+                'game.SinglePlayer',
+              },
+              {
+                game.GetIPAddress(),
+                game.GetMap(),
+                game.GetSkillLevel(),
+                game.GetTimeScale(),
+                game.IsDedicated(),
+                game.MaxPlayers(),
+                game.SinglePlayer(),
+              },
               0,
-              23
+              0
             )
         end
       )
