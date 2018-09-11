@@ -267,6 +267,8 @@ hook.Add(
             AddInformationTextLabels(
               panel,
               {
+                'engine.ActiveGamemode()',
+                'engine.IsPlayingDemo()',
                 'Entity(1):GetName()',
                 'game.GetIPAddress()',
                 'game.GetMap()',
@@ -278,6 +280,8 @@ hook.Add(
                 'GetHostName()',
               },
               {
+                engine.ActiveGamemode(),
+                engine.IsPlayingDemo(),
                 Entity(1):GetName(),
                 game.GetIPAddress(),
                 game.GetMap(),
