@@ -279,6 +279,10 @@ hook.Add(
                 'game.MaxPlayers()',
                 'game.SinglePlayer()',
                 'GetHostName()',
+                'system.GetCountry()',
+                'system.IsLinux()',
+                'system.IsOSX()',
+                'system.IsWindows()',
               },
               {
                 engine.ActiveGamemode(),
@@ -293,6 +297,10 @@ hook.Add(
                 game.MaxPlayers(),
                 game.SinglePlayer(),
                 GetHostName(),
+                system.GetCountry(),
+                system.IsLinux(),
+                system.IsOSX(),
+                system.IsWindows(),
               },
               0,
               0
