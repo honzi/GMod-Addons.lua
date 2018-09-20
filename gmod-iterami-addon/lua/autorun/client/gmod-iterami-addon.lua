@@ -269,6 +269,7 @@ hook.Add(
               {
                 'engine.ActiveGamemode()',
                 'engine.IsPlayingDemo()',
+                '1 / engine.TickInterval()',
                 'Entity(1):GetName()',
                 'game.GetIPAddress()',
                 'game.GetMap()',
@@ -282,6 +283,7 @@ hook.Add(
               {
                 engine.ActiveGamemode(),
                 engine.IsPlayingDemo(),
+                1 / engine.TickInterval(),
                 Entity(1):GetName(),
                 game.GetIPAddress(),
                 game.GetMap(),
