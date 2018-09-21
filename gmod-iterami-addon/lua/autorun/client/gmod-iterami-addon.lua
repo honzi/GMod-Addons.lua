@@ -69,15 +69,26 @@ function AddCommandTextEntries(panel, commands, defaults, values, x, y)
     end
 end
 
-function AddInformationTextLabels(panel, labels, values, x, y)
+function AddInformationButtons(panel, labels, values, x, y)
     for i, label in ipairs(labels) do
         y = y + 23
 
-        CreateTextLabel(
+        local textLabel = CreateTextLabel(
           panel,
-          label .. ' = ' .. tostring(values[i]),
-          x,
+          tostring(values[i]),
+          x + 155,
           y
+        )
+
+        CreateButton(
+          panel,
+          label,
+          x,
+          y,
+          function()
+              textLabel:SetText(tostring(values[i]))
+              textLabel:SizeToContents()
+          end
         )
     end
 end
@@ -272,7 +283,7 @@ hook.Add(
         function(panel)
             panel:ClearControls()
 
-            AddInformationTextLabels(
+            AddInformationButtons(
               panel,
               {
                 'engine.ActiveGamemode()',
