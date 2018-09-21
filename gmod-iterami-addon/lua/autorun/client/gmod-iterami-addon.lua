@@ -97,6 +97,8 @@ function CreateButton(panel, text, x, y, onclick)
     )
     button:SetText(text)
     button.DoClick = onclick
+
+    return button
 end
 
 function CreateCheckBox(panel, value, x, y, onchange)
@@ -110,6 +112,8 @@ function CreateCheckBox(panel, value, x, y, onchange)
     )
     button:SetValue(value)
     button.OnChange = onchange
+
+    return button
 end
 
 function CreateTextEntry(panel, text, default, value, x, y, onenter)
@@ -140,6 +144,8 @@ function CreateTextEntry(panel, text, default, value, x, y, onenter)
       x + 51,
       y + 10
     )
+
+    return textEntry
 end
 
 function CreateTextLabel(panel, value, x, y)
@@ -154,6 +160,8 @@ function CreateTextLabel(panel, value, x, y)
     textLabel:SetText(value)
     textLabel:SetTextColor(Color(0, 0, 0))
     textLabel:SizeToContents()
+
+    return textLabel
 end
 
 hook.Add(
