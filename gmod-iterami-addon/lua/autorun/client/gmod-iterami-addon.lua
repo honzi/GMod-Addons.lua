@@ -69,13 +69,19 @@ function AddCommandTextEntries(panel, commands, defaults, values, x, y)
     end
 end
 
-function AddInformationButtons(panel, labels, values, x, y)
+function AddInformationButtons(panel, labels, x, y)
     for i, label in ipairs(labels) do
         y = y + 23
 
+        local compiled = CompileString(
+          'return ' .. labels[i],
+          'info',
+          false
+        )
+
         local textLabel = CreateTextLabel(
           panel,
-          tostring(values[i]),
+          tostring(compiled()),
           x + 155,
           y
         )
@@ -86,7 +92,7 @@ function AddInformationButtons(panel, labels, values, x, y)
           x,
           y,
           function()
-              textLabel:SetText(tostring(values[i]))
+              textLabel:SetText(tostring(compiled()))
               textLabel:SizeToContents()
           end
         )
@@ -307,29 +313,6 @@ hook.Add(
                 'system.IsOSX()',
                 'system.IsWindowed()',
                 'system.IsWindows()',
-              },
-              {
-                engine.ActiveGamemode(),
-                engine.IsPlayingDemo(),
-                engine.IsRecordingDemo(),
-                engine.TickCount(),
-                1 / engine.TickInterval(),
-                Entity(1):GetName(),
-                game.GetIPAddress(),
-                game.GetMap(),
-                game.GetSkillLevel(),
-                game.GetTimeScale(),
-                game.IsDedicated(),
-                game.MaxPlayers(),
-                game.SinglePlayer(),
-                GetHostName(),
-                system.AppTime(),
-                system.BatteryPower(),
-                system.GetCountry(),
-                system.IsLinux(),
-                system.IsOSX(),
-                system.IsWindowed(),
-                system.IsWindows(),
               },
               0,
               0
