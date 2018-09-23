@@ -306,6 +306,8 @@ hook.Add(
                 'game.MaxPlayers()',
                 'game.SinglePlayer()',
                 'GetHostName()',
+                'os.time()',
+                'player.GetCount()',
                 'system.AppTime()',
                 'system.BatteryPower()',
                 'system.GetCountry()',
