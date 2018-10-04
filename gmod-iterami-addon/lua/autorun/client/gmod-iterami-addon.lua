@@ -298,6 +298,8 @@ hook.Add(
                 'engine.TickCount()',
                 '1 / engine.TickInterval()',
                 'Entity(1):GetName()',
+                'ents.GetCount()',
+                'frame_blend.IsActive()',
                 'game.GetIPAddress()',
                 'game.GetMap()',
                 'game.GetSkillLevel()',
