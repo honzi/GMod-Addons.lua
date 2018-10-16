@@ -311,6 +311,8 @@ hook.Add(
                 'game.MaxPlayers()',
                 'game.SinglePlayer()',
                 'GetHostName()',
+                'gui.IsConsoleVisible()',
+                'gui.IsGameUIVisible()',
                 'os.time()',
                 'player:GetCount()',
                 'system.AppTime()',
