@@ -253,6 +253,7 @@ hook.Add(
             AddCommandTextEntries(
               panel,
               {
+                'hurtme',
                 'impulse',
                 'sv_friction',
                 'sv_gravity',
@@ -261,12 +262,14 @@ hook.Add(
               },
               {
                 '',
+                '',
                 8,
                 600,
                 3500,
                 5,
               },
               {
+                '',
                 '',
                 GetConVar('sv_friction'):GetInt(),
                 GetConVar('sv_gravity'):GetInt(),
