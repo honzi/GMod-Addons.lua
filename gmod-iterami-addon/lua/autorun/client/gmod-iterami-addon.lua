@@ -198,7 +198,11 @@ hook.Add(
             AddCommandButtons(
               panel,
               {
+                'ai_disable',
                 'buddha',
+                'ch_createairboat',
+                'ch_createjalopy',
+                'ch_createjeep',
                 'disconnect',
                 'firstperson',
                 'flush',
@@ -210,6 +214,7 @@ hook.Add(
                 'pause',
                 'r_cleardecals',
                 'restart',
+                'shake',
                 'thirdperson',
               },
               0,
@@ -280,7 +285,7 @@ hook.Add(
                 GetConVar('sv_noclipspeed'):GetInt(),
               },
               0,
-              299
+              414
             )
         end
       )
