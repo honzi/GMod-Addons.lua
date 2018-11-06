@@ -225,6 +225,7 @@ hook.Add(
               panel,
               {
                 'ai_expression_optimization',
+                'ai_ignoreplayers',
                 'cl_draw_airboat_wake',
                 'cl_drawhud',
                 'cl_ejectbrass',
