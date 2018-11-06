@@ -199,6 +199,7 @@ hook.Add(
               panel,
               {
                 'ai_disable',
+                'ai_nodes',
                 'buddha',
                 'ch_createairboat',
                 'ch_createjalopy',
@@ -286,7 +287,7 @@ hook.Add(
                 GetConVar('sv_noclipspeed'):GetInt(),
               },
               0,
-              414
+              437
             )
         end
       )
