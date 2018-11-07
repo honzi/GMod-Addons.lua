@@ -263,6 +263,7 @@ hook.Add(
             AddCommandTextEntries(
               panel,
               {
+                'air_density',
                 'hurtme',
                 'impulse',
                 'sv_friction',
@@ -271,6 +272,7 @@ hook.Add(
                 'sv_noclipspeed',
               },
               {
+                2,
                 '',
                 '',
                 8,
@@ -279,12 +281,13 @@ hook.Add(
                 5,
               },
               {
+                physenv.GetAirDensity(),
                 '',
                 '',
-                GetConVar('sv_friction'):GetInt(),
-                GetConVar('sv_gravity'):GetInt(),
-                GetConVar('sv_maxvelocity'):GetInt(),
-                GetConVar('sv_noclipspeed'):GetInt(),
+                GetConVar('sv_friction'):GetFloat(),
+                GetConVar('sv_gravity'):GetFloat(),
+                GetConVar('sv_maxvelocity'):GetFloat(),
+                GetConVar('sv_noclipspeed'):GetFloat(),
               },
               0,
               437
