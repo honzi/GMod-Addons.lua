@@ -242,6 +242,7 @@ hook.Add(
                 'r_drawentities',
                 'r_drawparticles',
                 'r_drawrain',
+                'r_drawviewmodel',
                 'r_eyes',
                 'r_shadows',
                 'r_teeth',
