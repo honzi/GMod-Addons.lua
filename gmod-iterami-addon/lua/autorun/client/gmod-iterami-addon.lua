@@ -238,6 +238,7 @@ hook.Add(
                 'fog_enable_water_fog',
                 'mat_wireframe',
                 'net_graph',
+                'npc_citizen_auto_player_squad',
                 'r_3dsky',
                 'r_drawdecals',
                 'r_drawentities',
