@@ -1,11 +1,13 @@
-function AddCommandButtons(panel, commands, x, y)
+function AddCommandButtons(panel, commands)
+    y = 0
+
     for i, command in ipairs(commands) do
         y = y + 23
 
         CreateButton(
           panel,
           command,
-          x,
+          0,
           y,
           function()
               RunConsoleCommand(
@@ -17,14 +19,16 @@ function AddCommandButtons(panel, commands, x, y)
     end
 end
 
-function AddCommandCheckBoxes(panel, commands, x, y)
+function AddCommandCheckBoxes(panel, commands)
+    y = 0
+
     for i, command in ipairs(commands) do
         y = y + 23
 
         CreateCheckBox(
           panel,
           GetConVar(command):GetInt(),
-          x,
+          0,
           y,
           function(this)
               local value = 0
@@ -42,13 +46,15 @@ function AddCommandCheckBoxes(panel, commands, x, y)
         CreateTextLabel(
           panel,
           command,
-          x + 16,
+          16,
           y
         )
     end
 end
 
-function AddCommandTextEntries(panel, commands, defaults, values, x, y)
+function AddCommandTextEntries(panel, commands, defaults, values)
+    y = 0
+
     for i, command in ipairs(commands) do
         y = y + 23
 
@@ -69,7 +75,9 @@ function AddCommandTextEntries(panel, commands, defaults, values, x, y)
     end
 end
 
-function AddInformationButtons(panel, labels, x, y)
+function AddInformationButtons(panel, labels)
+    y = 0
+
     for i, label in ipairs(labels) do
         y = y + 23
 
@@ -82,14 +90,14 @@ function AddInformationButtons(panel, labels, x, y)
         local textLabel = CreateTextLabel(
           panel,
           tostring(compiled()),
-          x + 155,
+          155,
           y
         )
 
         CreateButton(
           panel,
           label,
-          x,
+          0,
           y,
           function()
               textLabel:SetText(tostring(compiled()))
@@ -151,15 +159,9 @@ function CreateTextEntry(panel, text, default, value, x, y, onenter)
 
     CreateTextLabel(
       panel,
-      text,
+      text .. ' ' .. default,
       x + 51,
       y
-    )
-    CreateTextLabel(
-      panel,
-      default,
-      x + 51,
-      y + 10
     )
 
     return textEntry
@@ -188,8 +190,8 @@ hook.Add(
       spawnmenu.AddToolMenuOption(
         'iterami',
         'iterami',
-        'Commands',
-        'Commands',
+        'Command Buttons',
+        'Command Buttons',
         '',
         '',
         function(panel)
@@ -217,10 +219,20 @@ hook.Add(
                 'restart',
                 'shake',
                 'thirdperson',
-              },
-              0,
-              0
+              }
             )
+        end
+      )
+
+      spawnmenu.AddToolMenuOption(
+        'iterami',
+        'iterami',
+        'Command Checkboxes',
+        'Command Checkboxes',
+        '',
+        '',
+        function(panel)
+            panel:ClearControls()
 
             AddCommandCheckBoxes(
               panel,
@@ -260,10 +272,20 @@ hook.Add(
                 'violence_agibs',
                 'violence_hblood',
                 'violence_hgibs',
-              },
-              152,
-              0
+              }
             )
+        end
+      )
+
+      spawnmenu.AddToolMenuOption(
+        'iterami',
+        'iterami',
+        'Command Text Entries',
+        'Command Text Entries',
+        '',
+        '',
+        function(panel)
+            panel:ClearControls()
 
             AddCommandTextEntries(
               panel,
@@ -311,9 +333,7 @@ hook.Add(
                 GetConVar('sv_gravity'):GetFloat(),
                 GetConVar('sv_maxvelocity'):GetFloat(),
                 GetConVar('sv_noclipspeed'):GetFloat(),
-              },
-              0,
-              437
+              }
             )
         end
       )
@@ -361,9 +381,7 @@ hook.Add(
                 'system.IsOSX()',
                 'system.IsWindowed()',
                 'system.IsWindows()',
-              },
-              0,
-              0
+              }
             )
         end
       )
