@@ -261,6 +261,7 @@ hook.Add(
                 'r_drawworld',
                 'r_eyes',
                 'r_shadows',
+                'r_skybox',
                 'r_teeth',
                 'sv_allow_votes',
                 'sv_alltalk',
