@@ -207,6 +207,7 @@ hook.Add(
                 'ch_createjalopy',
                 'ch_createjeep',
                 'disconnect',
+                'endmovie',
                 'firstperson',
                 'flush',
                 'givecurrentammo',
@@ -218,6 +219,7 @@ hook.Add(
                 'r_cleardecals',
                 'restart',
                 'shake',
+                'startmovie',
                 'thirdperson',
               }
             )
@@ -248,6 +250,7 @@ hook.Add(
                 'cl_showfps',
                 'cl_showpos',
                 'fog_enable_water_fog',
+                'mat_drawwater',
                 'mat_wireframe',
                 'net_graph',
                 'npc_citizen_auto_player_squad',
