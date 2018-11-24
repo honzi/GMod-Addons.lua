@@ -1,6 +1,4 @@
-function AddCommandButtons(panel, commands)
-    y = 0
-
+function AddCommandButtons(panel, commands, y)
     for i, command in ipairs(commands) do
         y = y + 23
 
@@ -17,11 +15,11 @@ function AddCommandButtons(panel, commands)
           end
         )
     end
+
+    return y
 end
 
-function AddCommandCheckBoxes(panel, commands)
-    y = 0
-
+function AddCommandCheckBoxes(panel, commands, y)
     for i, command in ipairs(commands) do
         y = y + 23
 
@@ -50,11 +48,11 @@ function AddCommandCheckBoxes(panel, commands)
           y
         )
     end
+
+    return y
 end
 
-function AddCommandTextEntries(panel, commands, defaults, values)
-    y = 0
-
+function AddCommandTextEntries(panel, commands, defaults, values, y)
     for i, command in ipairs(commands) do
         y = y + 23
 
@@ -73,11 +71,11 @@ function AddCommandTextEntries(panel, commands, defaults, values)
           end
         )
     end
+
+    return y
 end
 
-function AddInformationButtons(panel, labels)
-    y = 0
-
+function AddInformationButtons(panel, labels, y)
     for i, label in ipairs(labels) do
         y = y + 23
 
@@ -105,6 +103,8 @@ function AddInformationButtons(panel, labels)
           end
         )
     end
+
+    return y
 end
 
 function CreateButton(panel, text, x, y, onclick)
@@ -190,94 +190,32 @@ hook.Add(
       spawnmenu.AddToolMenuOption(
         'iterami',
         'iterami',
-        'Command Buttons',
-        'Command Buttons',
+        'AI',
+        'AI',
         '',
         '',
         function(panel)
             panel:ClearControls()
 
-            AddCommandButtons(
+            y = 0
+
+            y = AddCommandButtons(
               panel,
               {
                 'ai_disable',
                 'ai_nodes',
-                'buddha',
-                'ch_createairboat',
-                'ch_createjalopy',
-                'ch_createjeep',
-                'disconnect',
-                'endmovie',
-                'firstperson',
-                'flush',
-                'givecurrentammo',
-                'god',
-                'kill',
-                'noclip',
-                'notarget',
-                'pause',
-                'r_cleardecals',
-                'restart',
-                'shake',
-                'startmovie',
-                'thirdperson',
-              }
+              },
+              y
             )
-        end
-      )
 
-      spawnmenu.AddToolMenuOption(
-        'iterami',
-        'iterami',
-        'Command Checkboxes',
-        'Command Checkboxes',
-        '',
-        '',
-        function(panel)
-            panel:ClearControls()
-
-            AddCommandCheckBoxes(
+            y = AddCommandCheckBoxes(
               panel,
               {
                 'ai_expression_optimization',
                 'ai_ignoreplayers',
-                'cl_draw_airboat_wake',
-                'cl_drawhud',
-                'cl_ejectbrass',
-                'cl_localnetworkbackdoor',
-                'cl_ragdoll_collide',
-                'cl_show_splashes',
-                'cl_showfps',
-                'cl_showpos',
-                'fog_enable_water_fog',
-                'mat_drawwater',
-                'mat_wireframe',
-                'net_graph',
                 'npc_citizen_auto_player_squad',
-                'r_3dsky',
-                'r_drawdecals',
-                'r_drawentities',
-                'r_drawparticles',
-                'r_drawrain',
-                'r_drawskybox',
-                'r_drawviewmodel',
-                'r_drawworld',
-                'r_eyes',
-                'r_shadows',
-                'r_skybox',
-                'r_snowenable',
-                'r_teeth',
-                'sv_allow_votes',
-                'sv_alltalk',
-                'sv_footsteps',
-                'sv_ladder_useonly',
-                'sv_voiceenable',
-                'vcollide_wireframe',
-                'violence_ablood',
-                'violence_agibs',
-                'violence_hblood',
-                'violence_hgibs',
-              }
+              },
+              y
             )
         end
       )
@@ -285,20 +223,90 @@ hook.Add(
       spawnmenu.AddToolMenuOption(
         'iterami',
         'iterami',
-        'Command Text Entries',
-        'Command Text Entries',
+        'Entities',
+        'Entities',
         '',
         '',
         function(panel)
             panel:ClearControls()
 
-            AddCommandTextEntries(
+            y = 0
+
+            y = AddCommandButtons(
+              panel,
+              {
+                'ch_createairboat',
+                'ch_createjalopy',
+                'ch_createjeep',
+              },
+              y
+            )
+
+            y = AddCommandCheckBoxes(
+              panel,
+              {
+                'cl_draw_airboat_wake',
+                'cl_ejectbrass',
+                'cl_ragdoll_collide',
+                'r_drawentities',
+                'r_eyes',
+                'r_teeth',
+                'sv_footsteps',
+                'violence_ablood',
+                'violence_agibs',
+                'violence_hblood',
+                'violence_hgibs',
+              },
+              y
+            )
+        end
+      )
+
+      spawnmenu.AddToolMenuOption(
+        'iterami',
+        'iterami',
+        'Environment',
+        'Environment',
+        '',
+        '',
+        function(panel)
+            panel:ClearControls()
+
+            y = 0;
+
+            y = AddCommandButtons(
+              panel,
+              {
+                'r_cleardecals',
+              },
+              y
+            )
+
+            y = AddCommandCheckBoxes(
+              panel,
+              {
+                'cl_show_splashes',
+                'fog_enable_water_fog',
+                'mat_drawwater',
+                'mat_wireframe',
+                'r_3dsky',
+                'r_drawdecals',
+                'r_drawparticles',
+                'r_drawrain',
+                'r_drawskybox',
+                'r_drawworld',
+                'r_shadows',
+                'r_skybox',
+                'r_snowenable',
+                'vcollide_wireframe',
+              },
+              y
+            )
+
+            y = AddCommandTextEntries(
               panel,
               {
                 'air_density',
-                'hurtme',
-                'impulse',
-                'player_throwforce',
                 'r_rainalpha',
                 'r_raindensity',
                 'r_rainlength',
@@ -309,13 +317,9 @@ hook.Add(
                 'sv_friction',
                 'sv_gravity',
                 'sv_maxvelocity',
-                'sv_noclipspeed',
               },
               {
                 2,
-                '',
-                '',
-                1000,
                 0.25,
                 0.001,
                 0.075,
@@ -326,13 +330,9 @@ hook.Add(
                 8,
                 600,
                 3500,
-                5,
               },
               {
                 physenv.GetAirDensity(),
-                '',
-                '',
-                GetConVar('player_throwforce'):GetFloat(),
                 GetConVar('r_rainalpha'):GetFloat(),
                 GetConVar('r_raindensity'):GetFloat(),
                 GetConVar('r_rainlength'):GetFloat(),
@@ -343,8 +343,50 @@ hook.Add(
                 GetConVar('sv_friction'):GetFloat(),
                 GetConVar('sv_gravity'):GetFloat(),
                 GetConVar('sv_maxvelocity'):GetFloat(),
-                GetConVar('sv_noclipspeed'):GetFloat(),
-              }
+              },
+              y
+            )
+        end
+      )
+
+      spawnmenu.AddToolMenuOption(
+        'iterami',
+        'iterami',
+        'GMod',
+        'GMod',
+        '',
+        '',
+        function(panel)
+            panel:ClearControls()
+
+            y = 0
+
+            y = AddCommandButtons(
+              panel,
+              {
+                'disconnect',
+                'endmovie',
+                'flush',
+                'pause',
+                'restart',
+                'shake',
+                'startmovie',
+              },
+              y
+            )
+
+            y = AddCommandCheckBoxes(
+              panel,
+              {
+                'cl_localnetworkbackdoor',
+                'cl_showfps',
+                'cl_showpos',
+                'net_graph',
+                'sv_allow_votes',
+                'sv_alltalk',
+                'sv_voiceenable',
+              },
+              y
             )
         end
       )
@@ -359,7 +401,9 @@ hook.Add(
         function(panel)
             panel:ClearControls()
 
-            AddInformationButtons(
+            y = 0
+
+            y = AddInformationButtons(
               panel,
               {
                 'engine.ActiveGamemode()',
@@ -392,7 +436,70 @@ hook.Add(
                 'system.IsOSX()',
                 'system.IsWindowed()',
                 'system.IsWindows()',
-              }
+              },
+              y
+            )
+        end
+      )
+
+      spawnmenu.AddToolMenuOption(
+        'iterami',
+        'iterami',
+        'Players',
+        'Players',
+        '',
+        '',
+        function(panel)
+            panel:ClearControls()
+
+            y = 0
+
+            y = AddCommandButtons(
+              panel,
+              {
+                'buddha',
+                'firstperson',
+                'givecurrentammo',
+                'god',
+                'kill',
+                'noclip',
+                'notarget',
+                'thirdperson',
+              },
+              y
+            )
+
+            y = AddCommandCheckBoxes(
+              panel,
+              {
+                'cl_drawhud',
+                'r_drawviewmodel',
+                'sv_ladder_useonly',
+              },
+              y
+            )
+
+            y = AddCommandTextEntries(
+              panel,
+              {
+                'hurtme',
+                'impulse',
+                'player_throwforce',
+                'sv_noclipspeed',
+              },
+              {
+                '',
+                '',
+                1000,
+                5,
+              },
+              {
+                '',
+                '',
+                GetConVar('player_throwforce'):GetFloat(),
+                GetConVar('sv_noclipspeed'):GetFloat(),
+              },
+              y
             )
         end
       )
