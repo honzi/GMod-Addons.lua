@@ -189,7 +189,7 @@ hook.Add(
   function()
       spawnmenu.AddToolMenuOption(
         'iterami',
-        'iterami',
+        'Commands',
         'AI',
         'AI',
         '',
@@ -222,7 +222,7 @@ hook.Add(
 
       spawnmenu.AddToolMenuOption(
         'iterami',
-        'iterami',
+        'Commands',
         'Entities',
         'Entities',
         '',
@@ -264,7 +264,7 @@ hook.Add(
 
       spawnmenu.AddToolMenuOption(
         'iterami',
-        'iterami',
+        'Commands',
         'Environment',
         'Environment',
         '',
@@ -351,7 +351,7 @@ hook.Add(
 
       spawnmenu.AddToolMenuOption(
         'iterami',
-        'iterami',
+        'Commands',
         'GMod',
         'GMod',
         '',
@@ -393,7 +393,7 @@ hook.Add(
 
       spawnmenu.AddToolMenuOption(
         'iterami',
-        'iterami',
+        'Commands',
         'Information',
         'Information',
         '',
@@ -444,7 +444,7 @@ hook.Add(
 
       spawnmenu.AddToolMenuOption(
         'iterami',
-        'iterami',
+        'Commands',
         'Players',
         'Players',
         '',
