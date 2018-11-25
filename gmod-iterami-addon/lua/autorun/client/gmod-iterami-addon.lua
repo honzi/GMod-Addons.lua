@@ -307,6 +307,7 @@ hook.Add(
               panel,
               {
                 'air_density',
+                'r_decals',
                 'r_rainalpha',
                 'r_raindensity',
                 'r_rainlength',
@@ -320,6 +321,7 @@ hook.Add(
               },
               {
                 2,
+                2048,
                 0.25,
                 0.001,
                 0.075,
@@ -333,6 +335,7 @@ hook.Add(
               },
               {
                 physenv.GetAirDensity(),
+                GetConVar('r_decals'):GetFloat(),
                 GetConVar('r_rainalpha'):GetFloat(),
                 GetConVar('r_raindensity'):GetFloat(),
                 GetConVar('r_rainlength'):GetFloat(),
