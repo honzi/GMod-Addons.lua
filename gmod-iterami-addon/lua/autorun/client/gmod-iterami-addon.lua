@@ -204,6 +204,7 @@ hook.Add(
               {
                 'ai_disable',
                 'ai_nodes',
+                'npc_reset',
               },
               y
             )
@@ -238,6 +239,8 @@ hook.Add(
                 'ch_createairboat',
                 'ch_createjalopy',
                 'ch_createjeep',
+                'lua_reloadents',
+                'vehicle_flushscript',
               },
               y
             )
@@ -277,6 +280,9 @@ hook.Add(
             y = AddCommandButtons(
               panel,
               {
+                'effects_reload',
+                'mat_reloadallmaterials',
+                'mat_reloadtextures',
                 'r_cleardecals',
               },
               y
@@ -371,10 +377,13 @@ hook.Add(
                 'disconnect',
                 'endmovie',
                 'flush',
+                'language_reload',
+                'menu_reload',
                 'pause',
                 'restart',
                 'shake',
                 'startmovie',
+                'vox_reload',
               },
               y
             )
@@ -465,6 +474,7 @@ hook.Add(
                 'firstperson',
                 'givecurrentammo',
                 'god',
+                'hud_reloadscheme',
                 'kill',
                 'noclip',
                 'notarget',
