@@ -288,6 +288,7 @@ hook.Add(
                 'cl_show_splashes',
                 'fog_enable_water_fog',
                 'mat_drawwater',
+                'mat_fullbright',
                 'mat_wireframe',
                 'r_3dsky',
                 'r_drawdecals',
