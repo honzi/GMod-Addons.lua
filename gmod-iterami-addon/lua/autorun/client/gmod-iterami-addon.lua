@@ -212,6 +212,7 @@ hook.Add(
             y = AddCommandCheckBoxes(
               panel,
               {
+                'ai_block_damage',
                 'ai_expression_optimization',
                 'ai_ignoreplayers',
                 'npc_citizen_auto_player_squad',
