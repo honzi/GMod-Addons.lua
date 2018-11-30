@@ -315,6 +315,7 @@ hook.Add(
               panel,
               {
                 'air_density',
+                'cl_windspeed',
                 'r_decals',
                 'r_rainalpha',
                 'r_raindensity',
@@ -329,6 +330,7 @@ hook.Add(
               },
               {
                 2,
+                0,
                 2048,
                 0.25,
                 0.001,
@@ -343,6 +345,7 @@ hook.Add(
               },
               {
                 physenv.GetAirDensity(),
+                GetConVar('cl_windspeed'):GetFloat(),
                 GetConVar('r_decals'):GetFloat(),
                 GetConVar('r_rainalpha'):GetFloat(),
                 GetConVar('r_raindensity'):GetFloat(),
@@ -472,6 +475,7 @@ hook.Add(
               panel,
               {
                 'buddha',
+                'camortho',
                 'firstperson',
                 'givecurrentammo',
                 'god',
@@ -488,6 +492,7 @@ hook.Add(
               panel,
               {
                 'cl_drawhud',
+                'cl_playerspraydisable',
                 'r_drawviewmodel',
                 'sv_ladder_useonly',
               },
