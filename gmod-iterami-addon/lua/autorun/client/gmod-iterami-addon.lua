@@ -285,6 +285,7 @@ hook.Add(
                 'mat_reloadallmaterials',
                 'mat_reloadtextures',
                 'r_cleardecals',
+                'stopsound',
               },
               y
             )
@@ -306,6 +307,7 @@ hook.Add(
                 'r_shadows',
                 'r_skybox',
                 'r_snowenable',
+                'smoothstairs',
                 'vcollide_wireframe',
               },
               y
@@ -386,6 +388,7 @@ hook.Add(
                 'pause',
                 'restart',
                 'shake',
+                'shake_stop',
                 'startmovie',
                 'vox_reload',
               },
@@ -495,6 +498,8 @@ hook.Add(
                 'cl_playerspraydisable',
                 'r_drawviewmodel',
                 'sv_ladder_useonly',
+                'thirdperson_platformer',
+                'thirdperson_screenspace',
               },
               y
             )
