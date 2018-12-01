@@ -300,6 +300,8 @@ hook.Add(
                 'mat_wireframe',
                 'r_3dsky',
                 'r_drawdecals',
+                'r_drawdisp',
+                'r_drawmodeldecals',
                 'r_drawparticles',
                 'r_drawrain',
                 'r_drawskybox',
