@@ -513,18 +513,21 @@ hook.Add(
                 'impulse',
                 'player_throwforce',
                 'sv_noclipspeed',
+                'zoom_sensitivity_ratio',
               },
               {
                 '',
                 '',
                 1000,
                 5,
+                1,
               },
               {
                 '',
                 '',
                 GetConVar('player_throwforce'):GetFloat(),
                 GetConVar('sv_noclipspeed'):GetFloat(),
+                GetConVar('zoom_sensitivity_ratio'):GetFloat(),
               },
               y
             )
