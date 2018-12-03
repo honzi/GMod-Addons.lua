@@ -304,6 +304,7 @@ hook.Add(
                 'r_drawmodeldecals',
                 'r_drawparticles',
                 'r_drawrain',
+                'r_drawropes',
                 'r_drawskybox',
                 'r_drawworld',
                 'r_shadows',
