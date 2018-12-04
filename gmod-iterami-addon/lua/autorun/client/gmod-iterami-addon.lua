@@ -294,6 +294,7 @@ hook.Add(
               panel,
               {
                 'cl_show_splashes',
+                'explosion_dlight',
                 'fog_enable_water_fog',
                 'mat_drawwater',
                 'mat_fullbright',
@@ -482,6 +483,7 @@ hook.Add(
               {
                 'buddha',
                 'camortho',
+                'explode',
                 'firstperson',
                 'givecurrentammo',
                 'god',
@@ -499,6 +501,7 @@ hook.Add(
               {
                 'cl_drawhud',
                 'cl_playerspraydisable',
+                'coop',
                 'r_drawviewmodel',
                 'sv_ladder_useonly',
                 'thirdperson_platformer',
