@@ -253,6 +253,7 @@ hook.Add(
                 'cl_ejectbrass',
                 'cl_ragdoll_collide',
                 'r_drawentities',
+                'r_eyemove',
                 'r_eyes',
                 'r_teeth',
                 'sv_footsteps',
@@ -293,6 +294,7 @@ hook.Add(
             y = AddCommandCheckBoxes(
               panel,
               {
+                'cl_leveloverview',
                 'cl_show_splashes',
                 'explosion_dlight',
                 'fog_enable_water_fog',
