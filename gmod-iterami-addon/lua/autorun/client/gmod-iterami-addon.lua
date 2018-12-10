@@ -215,6 +215,7 @@ hook.Add(
                 'ai_block_damage',
                 'ai_expression_optimization',
                 'ai_ignoreplayers',
+                'g_ai_citizen_show_enemy',
                 'npc_citizen_auto_player_squad',
               },
               y
@@ -418,6 +419,20 @@ hook.Add(
                 'sv_allow_votes',
                 'sv_alltalk',
                 'sv_voiceenable',
+              },
+              y
+            )
+
+            y = AddCommandTextEntries(
+              panel,
+              {
+                'jpeg_quality',
+              },
+              {
+                90,
+              },
+              {
+                GetConVar('jpeg_quality'):GetFloat(),
               },
               y
             )
