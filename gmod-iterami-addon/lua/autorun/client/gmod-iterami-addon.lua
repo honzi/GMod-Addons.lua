@@ -255,6 +255,7 @@ hook.Add(
                 'cl_ejectbrass',
                 'cl_ragdoll_collide',
                 'r_drawentities',
+                'r_drawrenderboxes',
                 'r_eyemove',
                 'r_eyes',
                 'r_teeth',
