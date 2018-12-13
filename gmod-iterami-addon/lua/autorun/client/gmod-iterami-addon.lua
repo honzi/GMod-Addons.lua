@@ -204,6 +204,7 @@ hook.Add(
               {
                 'ai_disable',
                 'ai_nodes',
+                'ai_resume',
                 'npc_reset',
               },
               y
@@ -212,6 +213,7 @@ hook.Add(
             y = AddCommandCheckBoxes(
               panel,
               {
+                'ai_debug_actbusy',
                 'ai_block_damage',
                 'ai_expression_optimization',
                 'ai_ignoreplayers',
