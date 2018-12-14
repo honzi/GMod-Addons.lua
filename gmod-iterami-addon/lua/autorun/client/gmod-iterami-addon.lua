@@ -332,6 +332,7 @@ hook.Add(
               {
                 'air_density',
                 'cl_windspeed',
+                'phys_timescale',
                 'r_decals',
                 'r_maxdlights',
                 'r_rainalpha',
@@ -348,6 +349,7 @@ hook.Add(
               {
                 2,
                 0,
+                1,
                 2048,
                 32,
                 0.25,
@@ -364,6 +366,7 @@ hook.Add(
               {
                 physenv.GetAirDensity(),
                 GetConVar('cl_windspeed'):GetFloat(),
+                GetConVar('phys_timescale'):GetFloat(),
                 GetConVar('r_decals'):GetFloat(),
                 GetConVar('r_maxdlights'):GetFloat(),
                 GetConVar('r_rainalpha'):GetFloat(),
