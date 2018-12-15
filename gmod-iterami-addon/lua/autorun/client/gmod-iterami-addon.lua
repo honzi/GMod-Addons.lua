@@ -217,6 +217,7 @@ hook.Add(
                 'ai_block_damage',
                 'ai_expression_optimization',
                 'ai_ignoreplayers',
+                'ai_inhibit_spawners',
                 'g_ai_citizen_show_enemy',
                 'npc_citizen_auto_player_squad',
               },
