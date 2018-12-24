@@ -219,6 +219,9 @@ hook.Add(
                 'ai_ignoreplayers',
                 'ai_inhibit_spawners',
                 'g_ai_citizen_show_enemy',
+                'hunter_hate_attached_striderbusters',
+                'hunter_hate_held_striderbusters',
+                'hunter_stand_still',
                 'npc_citizen_auto_player_squad',
               },
               y
@@ -333,6 +336,7 @@ hook.Add(
               {
                 'air_density',
                 'cl_windspeed',
+                'hunter_flechette_speed',
                 'phys_timescale',
                 'r_decals',
                 'r_maxdlights',
@@ -350,6 +354,7 @@ hook.Add(
               {
                 2,
                 0,
+                2000,
                 1,
                 2048,
                 32,
@@ -367,6 +372,7 @@ hook.Add(
               {
                 physenv.GetAirDensity(),
                 GetConVar('cl_windspeed'):GetFloat(),
+                GetConVar('hunter_flechette_speed'):GetFloat(),
                 GetConVar('phys_timescale'):GetFloat(),
                 GetConVar('r_decals'):GetFloat(),
                 GetConVar('r_maxdlights'):GetFloat(),
@@ -519,6 +525,7 @@ hook.Add(
                 'givecurrentammo',
                 'god',
                 'hud_reloadscheme',
+                'hunter_shoot_flechette',
                 'kill',
                 'noclip',
                 'notarget',
