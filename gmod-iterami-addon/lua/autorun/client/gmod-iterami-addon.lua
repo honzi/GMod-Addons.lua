@@ -219,10 +219,29 @@ hook.Add(
                 'ai_ignoreplayers',
                 'ai_inhibit_spawners',
                 'g_ai_citizen_show_enemy',
+                'g_debug_hunter_charge',
+                'g_debug_turret',
+                'g_debug_turret_ceiling',
+                'g_debug_vortigaunt_aim',
                 'hunter_hate_attached_striderbusters',
                 'hunter_hate_held_striderbusters',
                 'hunter_stand_still',
                 'npc_citizen_auto_player_squad',
+
+              },
+              y
+            )
+
+            y = AddCommandTextEntries(
+              panel,
+              {
+                'sk_vortigaunt_zap_range',
+              },
+              {
+                100,
+              },
+              {
+                GetConVar('sk_vortigaunt_zap_range'):GetFloat(),
               },
               y
             )
@@ -540,6 +559,7 @@ hook.Add(
                 'cl_drawhud',
                 'cl_playerspraydisable',
                 'coop',
+                'g_debug_physcannon',
                 'mp_flashlight',
                 'r_drawviewmodel',
                 'sv_ladder_useonly',
