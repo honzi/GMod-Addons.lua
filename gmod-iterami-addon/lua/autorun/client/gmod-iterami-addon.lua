@@ -214,6 +214,7 @@ hook.Add(
               panel,
               {
                 'ai_debug_actbusy',
+                'ai_debug_squads',
                 'ai_block_damage',
                 'ai_expression_optimization',
                 'ai_ignoreplayers',
@@ -539,6 +540,7 @@ hook.Add(
               {
                 'buddha',
                 'camortho',
+                'clear_debug_overlays',
                 'explode',
                 'firstperson',
                 'givecurrentammo',
