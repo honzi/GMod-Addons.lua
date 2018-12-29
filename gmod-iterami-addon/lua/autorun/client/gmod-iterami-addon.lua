@@ -228,6 +228,7 @@ hook.Add(
                 'g_debug_vortigaunt_aim',
                 'hunter_hate_attached_striderbusters',
                 'hunter_hate_held_striderbusters',
+                'hunter_show_weapon_los_condition',
                 'hunter_stand_still',
                 'npc_citizen_auto_player_squad',
 
