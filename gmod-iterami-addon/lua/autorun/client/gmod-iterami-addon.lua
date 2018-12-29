@@ -7,6 +7,7 @@ function AddCommandButtons(panel, commands, y)
           command,
           0,
           y,
+          300,
           function()
               RunConsoleCommand(
                 command,
@@ -97,6 +98,7 @@ function AddInformationButtons(panel, labels, y)
           label,
           0,
           y,
+          150,
           function()
               textLabel:SetText(tostring(compiled()))
               textLabel:SizeToContents()
@@ -107,13 +109,13 @@ function AddInformationButtons(panel, labels, y)
     return y
 end
 
-function CreateButton(panel, text, x, y, onclick)
+function CreateButton(panel, text, x, y, width, onclick)
     local button = vgui.Create(
       'DButton',
       panel
     )
     button:SetSize(
-      150,
+      width,
       23
     )
     button:SetPos(
@@ -268,6 +270,7 @@ hook.Add(
                 'ch_createjalopy',
                 'ch_createjeep',
                 'create_flashlight',
+                'ent_cancelpendingentfires',
                 'lua_reloadents',
                 'vehicle_flushscript',
               },
@@ -561,6 +564,7 @@ hook.Add(
                 'cl_drawhud',
                 'cl_playerspraydisable',
                 'coop',
+                'enable_debug_overlays',
                 'g_debug_physcannon',
                 'mp_flashlight',
                 'r_drawviewmodel',
