@@ -231,7 +231,6 @@ hook.Add(
                 'hunter_show_weapon_los_condition',
                 'hunter_stand_still',
                 'npc_citizen_auto_player_squad',
-
               },
               y
             )
@@ -239,12 +238,24 @@ hook.Add(
             y = AddCommandTextEntries(
               panel,
               {
+                'sk_citizen_heal_ally',
+                'sk_citizen_heal_ally_delay',
+                'sk_citizen_heal_player',
+                'sk_citizen_heal_player_delay',
                 'sk_vortigaunt_zap_range',
               },
               {
+                30,
+                20,
+                25,
+                25,
                 100,
               },
               {
+                GetConVar('sk_citizen_heal_ally'):GetFloat(),
+                GetConVar('sk_citizen_heal_ally_delay'):GetFloat(),
+                GetConVar('sk_citizen_heal_player'):GetFloat(),
+                GetConVar('sk_citizen_heal_player_delay'):GetFloat(),
                 GetConVar('sk_vortigaunt_zap_range'):GetFloat(),
               },
               y
