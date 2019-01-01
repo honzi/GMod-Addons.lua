@@ -474,12 +474,15 @@ hook.Add(
             y = AddCommandTextEntries(
               panel,
               {
+                'host_timescale',
                 'jpeg_quality',
               },
               {
+                1,
                 90,
               },
               {
+                GetConVar('host_timescale'):GetFloat(),
                 GetConVar('jpeg_quality'):GetFloat(),
               },
               y
