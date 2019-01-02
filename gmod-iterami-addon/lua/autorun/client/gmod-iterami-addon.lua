@@ -437,74 +437,6 @@ hook.Add(
       spawnmenu.AddToolMenuOption(
         'iterami',
         'Commands',
-        'GMod',
-        'GMod',
-        '',
-        '',
-        function(panel)
-            panel:ClearControls()
-
-            y = 0
-
-            y = AddCommandButtons(
-              panel,
-              {
-                'clear_debug_overlays',
-                'disconnect',
-                'endmovie',
-                'flush',
-                'language_reload',
-                'menu_reload',
-                'pause',
-                'restart',
-                'shake',
-                'shake_stop',
-                'startmovie',
-                'vox_reload',
-              },
-              y
-            )
-
-            y = AddCommandCheckBoxes(
-              panel,
-              {
-                'cl_localnetworkbackdoor',
-                'cl_showfps',
-                'cl_showpos',
-                'mat_show_texture_memory_usage',
-                'net_graph',
-                'sv_allow_votes',
-                'sv_alltalk',
-                'sv_voiceenable',
-              },
-              y
-            )
-
-            y = AddCommandTextEntries(
-              panel,
-              {
-                'host_timescale',
-                'jpeg_quality',
-                'mat_viewportscale',
-              },
-              {
-                1,
-                90,
-                1,
-              },
-              {
-                GetConVar('host_timescale'):GetFloat(),
-                GetConVar('jpeg_quality'):GetFloat(),
-                GetConVar('mat_viewportscale'):GetFloat(),
-              },
-              y
-            )
-        end
-      )
-
-      spawnmenu.AddToolMenuOption(
-        'iterami',
-        'Commands',
         'Information',
         'Information',
         '',
@@ -570,16 +502,28 @@ hook.Add(
               {
                 'buddha',
                 'camortho',
+                'clear_debug_overlays',
+                'disconnect',
+                'endmovie',
                 'explode',
                 'firstperson',
+                'flush',
                 'givecurrentammo',
                 'god',
                 'hud_reloadscheme',
                 'hunter_shoot_flechette',
                 'kill',
+                'language_reload',
+                'menu_reload',
                 'noclip',
                 'notarget',
+                'pause',
+                'restart',
+                'shake',
+                'shake_stop',
+                'startmovie',
                 'thirdperson',
+                'vox_reload',
               },
               y
             )
@@ -588,13 +532,21 @@ hook.Add(
               panel,
               {
                 'cl_drawhud',
+                'cl_localnetworkbackdoor',
                 'cl_playerspraydisable',
+                'cl_showfps',
+                'cl_showpos',
                 'coop',
                 'enable_debug_overlays',
                 'g_debug_physcannon',
+                'mat_show_texture_memory_usage',
                 'mp_flashlight',
+                'net_graph',
                 'r_drawviewmodel',
+                'sv_allow_votes',
+                'sv_alltalk',
                 'sv_ladder_useonly',
+                'sv_voiceenable',
                 'thirdperson_platformer',
                 'thirdperson_screenspace',
               },
@@ -604,22 +556,31 @@ hook.Add(
             y = AddCommandTextEntries(
               panel,
               {
+                'host_timescale',
                 'hurtme',
                 'impulse',
+                'jpeg_quality',
+                'mat_viewportscale',
                 'player_throwforce',
                 'sv_noclipspeed',
                 'zoom_sensitivity_ratio',
               },
               {
+                1,
                 '',
                 '',
+                90,
+                1,
                 1000,
                 5,
                 1,
               },
               {
+                GetConVar('host_timescale'):GetFloat(),
                 '',
                 '',
+                GetConVar('jpeg_quality'):GetFloat(),
+                GetConVar('mat_viewportscale'):GetFloat(),
                 GetConVar('player_throwforce'):GetFloat(),
                 GetConVar('sv_noclipspeed'):GetFloat(),
                 GetConVar('zoom_sensitivity_ratio'):GetFloat(),
