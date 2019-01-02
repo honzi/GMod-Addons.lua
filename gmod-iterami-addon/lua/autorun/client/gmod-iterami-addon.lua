@@ -295,6 +295,8 @@ hook.Add(
                 'cl_draw_airboat_wake',
                 'cl_ejectbrass',
                 'cl_ragdoll_collide',
+                'mat_surfaceid',
+                'mat_surfacemat',
                 'r_drawentities',
                 'r_drawrenderboxes',
                 'r_eyemove',
@@ -344,6 +346,11 @@ hook.Add(
                 'fog_enable_water_fog',
                 'mat_drawwater',
                 'mat_fullbright',
+                'mat_normalmaps',
+                'mat_normals',
+                'mat_parallaxmap',
+                'mat_showlowresimage',
+                'mat_showmiplevels',
                 'mat_wireframe',
                 'r_3dsky',
                 'r_dispbuildable',
@@ -442,6 +449,7 @@ hook.Add(
             y = AddCommandButtons(
               panel,
               {
+                'clear_debug_overlays',
                 'disconnect',
                 'endmovie',
                 'flush',
@@ -463,6 +471,7 @@ hook.Add(
                 'cl_localnetworkbackdoor',
                 'cl_showfps',
                 'cl_showpos',
+                'mat_show_texture_memory_usage',
                 'net_graph',
                 'sv_allow_votes',
                 'sv_alltalk',
@@ -476,14 +485,17 @@ hook.Add(
               {
                 'host_timescale',
                 'jpeg_quality',
+                'mat_viewportscale',
               },
               {
                 1,
                 90,
+                1,
               },
               {
                 GetConVar('host_timescale'):GetFloat(),
                 GetConVar('jpeg_quality'):GetFloat(),
+                GetConVar('mat_viewportscale'):GetFloat(),
               },
               y
             )
@@ -558,7 +570,6 @@ hook.Add(
               {
                 'buddha',
                 'camortho',
-                'clear_debug_overlays',
                 'explode',
                 'firstperson',
                 'givecurrentammo',
