@@ -7,7 +7,7 @@ function AddCommandButtons(panel, commands, y)
           command,
           0,
           y,
-          300,
+          290,
           function()
               RunConsoleCommand(
                 command,
