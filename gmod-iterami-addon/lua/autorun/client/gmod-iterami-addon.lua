@@ -217,6 +217,7 @@ hook.Add(
               {
                 'ai_debug_actbusy',
                 'ai_debug_avoidancebounds',
+                'ai_debug_directnavprobe',
                 'ai_debug_shoot_positions',
                 'ai_debug_squads',
                 'ai_block_damage',
