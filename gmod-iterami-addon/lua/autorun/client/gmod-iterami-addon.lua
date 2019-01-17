@@ -248,6 +248,7 @@ hook.Add(
                 'sk_citizen_heal_ally_delay',
                 'sk_citizen_heal_player',
                 'sk_citizen_heal_player_delay',
+                'sk_citizen_player_stare_dist',
                 'sk_vortigaunt_zap_range',
               },
               {
@@ -255,6 +256,7 @@ hook.Add(
                 20,
                 25,
                 25,
+                72,
                 100,
               },
               {
@@ -262,6 +264,7 @@ hook.Add(
                 GetConVar('sk_citizen_heal_ally_delay'):GetFloat(),
                 GetConVar('sk_citizen_heal_player'):GetFloat(),
                 GetConVar('sk_citizen_heal_player_delay'):GetFloat(),
+                GetConVar('sk_citizen_player_stare_dist'):GetFloat(),
                 GetConVar('sk_vortigaunt_zap_range'):GetFloat(),
               },
               y
