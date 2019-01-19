@@ -388,6 +388,7 @@ hook.Add(
                 'r_skybox',
                 'r_snowenable',
                 'r_visambient',
+                'rope_shake',
                 'smoothstairs',
                 'vcollide_wireframe',
               },
