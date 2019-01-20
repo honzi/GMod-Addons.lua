@@ -319,6 +319,26 @@ hook.Add(
               },
               y
             )
+
+            y = AddCommandTextEntries(
+              panel,
+              {
+                'sk_airboat_drain_rate',
+                'sk_airboat_max_ammo',
+                'sk_airboat_recharge_rate',
+              },
+              {
+                10,
+                100,
+                15,
+              },
+              {
+                GetConVar('sk_airboat_drain_rate'):GetFloat(),
+                GetConVar('sk_airboat_max_ammo'):GetFloat(),
+                GetConVar('sk_airboat_recharge_rate'):GetFloat(),
+              },
+              y
+            )
         end
       )
 
