@@ -643,6 +643,33 @@ hook.Add(
             )
         end
       )
+
+      spawnmenu.AddToolMenuOption(
+        'iterami',
+        'Commands',
+        'Snippets',
+        'Snippets',
+        '',
+        '',
+        function(panel)
+            panel:ClearControls()
+
+            local snippet_enablegun = vgui.Create(
+              'DTextEntry',
+              panel
+            )
+            snippet_enablegun:SetSize(
+              290,
+              23
+            )
+            snippet_enablegun:SetPos(
+              0,
+              23
+            )
+            snippet_enablegun:SetText('ent_setname a; ent_fire a enablegun 1;')
+
+        end
+      )
   end
 )
 
