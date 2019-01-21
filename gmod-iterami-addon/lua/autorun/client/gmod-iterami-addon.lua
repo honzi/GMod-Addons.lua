@@ -69,7 +69,8 @@ function AddCommandTextEntries(panel, commands, defaults, values, y)
                 command,
                 self:GetValue()
               )
-          end
+          end,
+          50
         )
     end
 
@@ -143,13 +144,13 @@ function CreateCheckBox(panel, value, x, y, onchange)
     return button
 end
 
-function CreateTextEntry(panel, text, default, value, x, y, onenter)
+function CreateTextEntry(panel, text, default, value, x, y, onenter, width)
     local textEntry = vgui.Create(
       'DTextEntry',
       panel
     )
     textEntry:SetSize(
-      50,
+      width,
       23
     )
     textEntry:SetPos(
@@ -159,12 +160,14 @@ function CreateTextEntry(panel, text, default, value, x, y, onenter)
     textEntry:SetText(value)
     textEntry.OnEnter = onenter
 
-    CreateTextLabel(
-      panel,
-      text .. ' ' .. default,
-      x + 51,
-      y
-    )
+    if text ~= '' then
+        CreateTextLabel(
+          panel,
+          text .. ' ' .. default,
+          x + 51,
+          y
+        )
+    end
 
     return textEntry
 end
@@ -654,20 +657,19 @@ hook.Add(
         function(panel)
             panel:ClearControls()
 
-            local snippet_enablegun = vgui.Create(
-              'DTextEntry',
-              panel
-            )
-            snippet_enablegun:SetSize(
-              290,
-              23
-            )
-            snippet_enablegun:SetPos(
-              0,
-              23
-            )
-            snippet_enablegun:SetText('ent_setname a; ent_fire a enablegun 1;')
+            y = 23
 
+            CreateTextEntry(
+              panel,
+              '',
+              '',
+              'ent_setname a; ent_fire a enablegun 1;',
+              0,
+              y,
+              function(self)
+              end,
+              290
+            )
         end
       )
   end
