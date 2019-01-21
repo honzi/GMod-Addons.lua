@@ -237,6 +237,8 @@ hook.Add(
                 'hunter_show_weapon_los_condition',
                 'hunter_stand_still',
                 'npc_citizen_auto_player_squad',
+                'npc_citizen_auto_player_squad_allow_use',
+                'npc_citizen_insignia',
                 'strider_show_focus',
                 'strider_show_weapon_los_condition',
                 'strider_test_height',
