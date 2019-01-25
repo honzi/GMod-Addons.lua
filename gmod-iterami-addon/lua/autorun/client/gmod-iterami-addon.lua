@@ -597,6 +597,7 @@ hook.Add(
                 'cl_showfps',
                 'cl_showpos',
                 'coop',
+                'developer',
                 'enable_debug_overlays',
                 'g_debug_physcannon',
                 'mat_show_texture_memory_usage',
