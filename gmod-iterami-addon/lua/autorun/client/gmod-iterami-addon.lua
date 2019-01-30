@@ -617,6 +617,8 @@ hook.Add(
             y = AddCommandTextEntries(
               panel,
               {
+                'fadein',
+                'fadeout',
                 'host_timescale',
                 'hurtme',
                 'impulse',
@@ -630,6 +632,8 @@ hook.Add(
                 'zoom_sensitivity_ratio',
               },
               {
+                0,
+                0,
                 1,
                 '',
                 '',
@@ -643,6 +647,8 @@ hook.Add(
                 1,
               },
               {
+                0,
+                0,
                 GetConVar('host_timescale'):GetFloat(),
                 '',
                 '',
