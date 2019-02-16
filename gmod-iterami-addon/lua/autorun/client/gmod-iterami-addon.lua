@@ -369,6 +369,7 @@ hook.Add(
                 'mat_reloadallmaterials',
                 'mat_reloadtextures',
                 'r_cleardecals',
+                'showtriggers_toggle',
                 'stopsound',
               },
               y
