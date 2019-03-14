@@ -466,6 +466,7 @@ hook.Add(
                 'r_rainwidth',
                 'r_snowfallspeed',
                 'r_snowparticles',
+                'scene_maxcaptionradius',
                 'sv_friction',
                 'sv_gravity',
                 'sv_maxvelocity',
@@ -485,6 +486,7 @@ hook.Add(
                 2,
                 1.5,
                 500,
+                1200,
                 8,
                 600,
                 3500,
@@ -504,6 +506,7 @@ hook.Add(
                 GetConVar('r_rainwidth'):GetFloat(),
                 GetConVar('r_snowfallspeed'):GetFloat(),
                 GetConVar('r_snowparticles'):GetFloat(),
+                GetConVar('scene_maxcaptionradius'):GetFloat(),
                 GetConVar('sv_friction'):GetFloat(),
                 GetConVar('sv_gravity'):GetFloat(),
                 GetConVar('sv_maxvelocity'):GetFloat(),
@@ -636,6 +639,9 @@ hook.Add(
             y = AddCommandTextEntries(
               panel,
               {
+                'cc_linger_time',
+                'cc_predisplay_time',
+                'cc_sentencecaptionnorepeat',
                 'fadein',
                 'fadeout',
                 'host_timescale',
@@ -653,6 +659,9 @@ hook.Add(
                 'zoom_sensitivity_ratio',
               },
               {
+                1,
+                0.25,
+                4,
                 0,
                 0,
                 1,
@@ -670,6 +679,9 @@ hook.Add(
                 1,
               },
               {
+                GetConVar('cc_linger_time'):GetFloat(),
+                GetConVar('cc_predisplay_time'):GetFloat(),
+                GetConVar('cc_sentencecaptionnorepeat'):GetFloat(),
                 0,
                 0,
                 GetConVar('host_timescale'):GetFloat(),
