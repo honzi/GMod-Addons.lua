@@ -164,7 +164,7 @@ function CreateTextEntry(panel, text, default, value, x, y, onenter, width)
         CreateTextLabel(
           panel,
           text .. ' ' .. default,
-          x + 51,
+          x + width + 1,
           y
         )
     end
