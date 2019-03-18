@@ -70,7 +70,7 @@ function AddCommandTextEntries(panel, commands, defaults, values, y)
                 self:GetValue()
               )
           end,
-          50
+          40
         )
     end
 
