@@ -30,9 +30,9 @@ function AddCommandCheckBoxes(panel, commands, y)
           0,
           y,
           function(this)
-              local value = 0
+              local value = '0'
               if this:GetChecked() then
-                  value = 1
+                  value = '1'
               end
 
               RunConsoleCommand(
