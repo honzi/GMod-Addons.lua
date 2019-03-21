@@ -658,6 +658,7 @@ hook.Add(
                 'sv_ladder_useonly',
                 'sv_noclipduringpause',
                 'sv_pausable',
+                'sv_strict_notarget',
                 'sv_voiceenable',
                 'thirdperson_platformer',
                 'thirdperson_screenspace',
