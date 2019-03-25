@@ -394,18 +394,24 @@ hook.Add(
                 'sk_airboat_drain_rate',
                 'sk_airboat_max_ammo',
                 'sk_airboat_recharge_rate',
+                'sk_healthkit',
+                'sk_healthvial',
               },
               {
                 0.2,
                 10,
                 100,
                 15,
+                25,
+                10,
               },
               {
                 GetConVar('blink_duration'):GetFloat(),
                 GetConVar('sk_airboat_drain_rate'):GetFloat(),
                 GetConVar('sk_airboat_max_ammo'):GetFloat(),
                 GetConVar('sk_airboat_recharge_rate'):GetFloat(),
+                GetConVar('sk_healthkit'):GetFloat(),
+                GetConVar('sk_healthvial'):GetFloat(),
               },
               y
             )
