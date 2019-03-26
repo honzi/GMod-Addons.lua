@@ -406,6 +406,9 @@ hook.Add(
                 'sk_healthcharger',
                 'sk_healthkit',
                 'sk_healthvial',
+                'sk_suitcharger',
+                'sk_suitcharger_citadel',
+                'sk_suitcharger_citadel_maxarmor',
               },
               {
                 0.2,
@@ -415,6 +418,9 @@ hook.Add(
                 50,
                 25,
                 10,
+                30,
+                500,
+                200,
               },
               {
                 GetConVar('blink_duration'):GetFloat(),
@@ -424,6 +430,9 @@ hook.Add(
                 GetConVar('sk_healthcharger'):GetFloat(),
                 GetConVar('sk_healthkit'):GetFloat(),
                 GetConVar('sk_healthvial'):GetFloat(),
+                GetConVar('sk_suitcharger'):GetFloat(),
+                GetConVar('sk_suitcharger_citadel'):GetFloat(),
+                GetConVar('sk_suitcharger_citadel_maxarmor'):GetFloat(),
               },
               y
             )
