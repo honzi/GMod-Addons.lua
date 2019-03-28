@@ -294,6 +294,8 @@ hook.Add(
                 'sk_headcrab_poison_health',
                 'sk_manhack_health',
                 'sk_manhack_melee_dmg',
+                'sk_stalker_health',
+                'sk_stalker_melee_dmg',
                 'sk_vortigaunt_zap_range',
               },
               {
@@ -323,6 +325,8 @@ hook.Add(
                 35,
                 25,
                 20,
+                50,
+                5,
                 100,
               },
               {
@@ -352,6 +356,8 @@ hook.Add(
                 GetConVar('sk_headcrab_poison_health'):GetFloat(),
                 GetConVar('sk_manhack_health'):GetFloat(),
                 GetConVar('sk_manhack_melee_dmg'):GetFloat(),
+                GetConVar('sk_stalker_health'):GetFloat(),
+                GetConVar('sk_stalker_melee_dmg'):GetFloat(),
                 GetConVar('sk_vortigaunt_zap_range'):GetFloat(),
               },
               y
