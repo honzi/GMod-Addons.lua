@@ -362,6 +362,56 @@ hook.Add(
       spawnmenu.AddToolMenuOption(
         'iterami',
         'Commands',
+        'Blocked',
+        'Blocked',
+        '',
+        '',
+        function(panel)
+            panel:ClearControls()
+
+            y = 0
+
+            y = AddCommandButtons(
+              panel,
+              {
+                '_restart',
+                'buildcubemaps',
+                'clear',
+                'debug_dump',
+                'exit',
+                'gamemode_reload',
+                'gamemode_reload_cl',
+                'gameui_hide',
+                'hideconsole',
+                'quit',
+                'quti',
+                'toggleconsole',
+                'unbindall',
+              },
+              y
+            )
+
+            y = AddCommandCheckBoxes(
+              panel,
+              {
+                'cl_allowdownload',
+                'cl_allowupload',
+                'cl_mouseenable',
+                'cl_software_cursor',
+                'con_enable',
+                'crosshair',
+                'sv_cheats',
+                'voice_enable',
+                'voice_modenable',
+              },
+              y
+            )
+        end
+      )
+
+      spawnmenu.AddToolMenuOption(
+        'iterami',
+        'Commands',
         'Entities',
         'Entities',
         '',
