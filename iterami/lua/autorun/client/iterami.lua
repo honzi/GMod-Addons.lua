@@ -946,4 +946,4 @@ hook.Add(
   end
 )
 
-print('GMod-iterami-Addon loaded')
+print('iterami addon loaded')
