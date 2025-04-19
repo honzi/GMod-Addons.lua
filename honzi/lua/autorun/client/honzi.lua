@@ -193,7 +193,7 @@ hook.Add(
   'CustomMenuSettings',
   function()
       spawnmenu.AddToolMenuOption(
-        'iterami',
+        'Honzi',
         'Commands',
         'AI',
         'AI',
@@ -429,7 +429,7 @@ hook.Add(
       )
 
       spawnmenu.AddToolMenuOption(
-        'iterami',
+        'Honzi',
         'Commands',
         'Blocked',
         'Blocked',
@@ -479,7 +479,7 @@ hook.Add(
       )
 
       spawnmenu.AddToolMenuOption(
-        'iterami',
+        'Honzi',
         'Commands',
         'Entities',
         'Entities',
@@ -577,7 +577,7 @@ hook.Add(
       )
 
       spawnmenu.AddToolMenuOption(
-        'iterami',
+        'Honzi',
         'Commands',
         'Environment',
         'Environment',
@@ -725,7 +725,7 @@ hook.Add(
       )
 
       spawnmenu.AddToolMenuOption(
-        'iterami',
+        'Honzi',
         'Commands',
         'Information',
         'Information',
@@ -776,7 +776,7 @@ hook.Add(
       )
 
       spawnmenu.AddToolMenuOption(
-        'iterami',
+        'Honzi',
         'Commands',
         'Players',
         'Players',
@@ -919,7 +919,7 @@ hook.Add(
       )
 
       spawnmenu.AddToolMenuOption(
-        'iterami',
+        'Honzi',
         'Commands',
         'Snippets',
         'Snippets',
@@ -946,4 +946,4 @@ hook.Add(
   end
 )
 
-print('iterami addon loaded')
+print('Honzi's Addon loaded')
